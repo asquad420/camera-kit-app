@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launch Camera Kit</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            color: #333;
+        }
+        button {
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #FFFC00 0%, #FF0080 100%);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            color: #000;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        p {
+            margin-top: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎥 Camera Kit</h1>
+        <button onclick="openApp()">Launch Camera</button>
+        <p>Opens in a popup window without address bar</p>
+    </div>
+
+    <script>
+        function openApp() {
+            // Open in popup window without address bar or toolbars
+            window.open(
+                'https://asquad420.github.io/camera-kit-app/',
+                'CameraKit',
+                'width=1280,height=1280,menubar=no,toolbar=no,location=no,status=no,resizable=yes'
+            );
+        }
+    </script>
+</body>
+</html>
