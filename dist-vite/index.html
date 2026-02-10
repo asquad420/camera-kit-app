@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Kit</title>
+  <script type="module" crossorigin src="./assets/index-D86hLd-d.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-Dyjco3I1.css">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    
+    <div class="controls">
+        <div class="camera-selector">
+            <label for="cameraSelect">Select Camera:</label>
+            <select id="cameraSelect">
+                <option value="">Choose a camera...</option>
+            </select>
+        </div>
+        
+        <div class="button-group">
+            <button id="selectCameraBtn" disabled>Start Camera</button>
+            <button id="prevLensBtn" disabled>← Previous Lens</button>
+            <button id="nextLensBtn" disabled>Next Lens →</button>
+            <button id="stopBtn" disabled>Stop Camera</button>
+            <button id="settingsBtn">⚙️ Settings</button>
+        </div>
+        
+        <div id="status">Initializing...</div>
+    </div>
+    
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <h2>Lens Settings</h2>
+            <div id="lensList"></div>
+            <button id="addLensBtn">+ Add Lens</button>
+            <div class="modal-buttons">
+                <button id="saveSettings">Save</button>
+                <button id="closeSettings">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
